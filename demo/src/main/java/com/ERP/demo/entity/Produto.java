@@ -24,6 +24,8 @@ public class Produto {
 
     private Integer estoque;
 
+    private Boolean ativo;
+
 
     // --- Funcs Gets ---
     public Produto() {
@@ -46,6 +48,10 @@ public class Produto {
         return estoque;
     }
 
+    public Boolean getAtivado() {
+        return ativo;
+    }
+
 
     // --- Funcs Sets ---
     public void setNome(String nome) {
@@ -58,5 +64,9 @@ public class Produto {
 
     public void setEstoque(Integer estoque) {
         this.estoque = estoque;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
     }
 }
