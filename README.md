@@ -18,4 +18,8 @@ Sistema ERP de Estoque, voltado para o controle de estoque e produtos, juntament
 Todas as movimentações devem ficar registradas.
 
 ## Arquitetura
-Esse sistema será implementado em Layered Architecture
+Esse sistema será implementado em Layered Ar    chitecture
+
+# Rodando o Código
+Use o seguinte comando dentro da pasta "demo" para rodar o código.
+`mvn spring-boot:run`

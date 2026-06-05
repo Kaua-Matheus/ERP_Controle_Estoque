@@ -58,12 +58,12 @@ public class ProdutoService {
             repository.findById(id)
                 .orElseThrow();
 
-        produto.setAtivo(!produto.getAtivado());
+        produto.setAtivo(!produto.getAtivo());
 
         repository.save(produto);
 
         // Retorna novo status
-        return produto.getAtivado();
+        return produto.getAtivo();
     }
 
 }

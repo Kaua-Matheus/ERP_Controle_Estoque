@@ -48,7 +48,7 @@ public class Produto {
         return estoque;
     }
 
-    public Boolean getAtivado() {
+    public Boolean getAtivo() {
         return ativo;
     }
 
