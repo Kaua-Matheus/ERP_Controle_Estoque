@@ -3,7 +3,9 @@ package com.ERP.demo.service;
 import com.ERP.demo.entity.MovimentacaoEstoque;
 import com.ERP.demo.repository.MovimentacaoEstoqueRepository;
 
+// Java Imports
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,12 @@ public class MovimentacaoEstoqueService {
 
     public MovimentacaoEstoqueService(MovimentacaoEstoqueRepository repository) {
         this.repository = repository;
+    }
+
+
+    // Listar movimentações
+    public List<MovimentacaoEstoque> getMovimentacoes() {
+        return repository.findAll();
     }
 
 

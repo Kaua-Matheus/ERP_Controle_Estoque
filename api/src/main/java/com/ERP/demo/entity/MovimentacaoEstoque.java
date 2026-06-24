@@ -14,7 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-enum TipoMovimentacao {
+enum Tipo {
     ENTRADA,
     SAIDA
 }
@@ -37,7 +37,7 @@ public class MovimentacaoEstoque {
     private Integer quantidade;
 
     @Enumerated(EnumType.STRING)
-    private TipoMovimentacao tipo;
+    private Tipo tipo;
 
     private LocalDateTime data;
 
@@ -59,9 +59,10 @@ public class MovimentacaoEstoque {
         return quantidade;
     }
 
-    public TipoMovimentacao getTipoMovimentacao() {
+    public Tipo getTipoMovimentacao() {
         return tipo;
     }
+    
 
     public LocalDateTime getData() {
         return data;
@@ -77,7 +78,7 @@ public class MovimentacaoEstoque {
         this.quantidade = quantidade;
     }
 
-    public void setTipoMovimentacao(TipoMovimentacao tipo) {
+    public void setTipoMovimentacao(Tipo tipo) {
         this.tipo = tipo;
     }
 

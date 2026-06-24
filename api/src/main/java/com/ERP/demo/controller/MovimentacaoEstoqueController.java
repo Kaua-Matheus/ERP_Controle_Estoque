@@ -4,7 +4,7 @@ import com.ERP.demo.entity.MovimentacaoEstoque;
 import com.ERP.demo.service.MovimentacaoEstoqueService;
 
 // Java Utils
-// import java.util.List;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +16,13 @@ public class MovimentacaoEstoqueController {
 
     public MovimentacaoEstoqueController(MovimentacaoEstoqueService service) {
         this.service = service;
+    }
+
+
+    // Gets
+    @GetMapping()
+    public List<MovimentacaoEstoque> getMovimentacoes() {
+        return service.getMovimentacoes();
     }
 
 

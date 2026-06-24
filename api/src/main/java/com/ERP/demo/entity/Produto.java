@@ -1,8 +1,11 @@
 package com.ERP.demo.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -25,6 +28,11 @@ public class Produto {
     private Integer estoque;
 
     private Boolean ativo;
+
+    @OneToMany(
+        mappedBy = "produto"
+    )
+    private List<MovimentacaoEstoque> movimentacao;
 
 
     // --- Funcs Gets ---
